@@ -1,0 +1,67 @@
+<!-- For this stub, implement items marked with "Implement:" -->
+
+<!-- This is a basic HTML layout that exposes some UI controls
+     that fire callbacks.  The following JS function callbacks
+     need to reside in client_browser.js:
+         do_get()
+         do_post()
+         do_put()
+         do_delete()
+-->
+
+<!-- Implement: this HTML should use an external script file client_browser.js -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<h1>Widget API Exercise</h1>
+
+<table>
+<tr>
+<th>Method</th>
+<th>Parameters</th>
+<th>Response</th>
+</tr>
+
+
+<tr>
+<form action="/widget_models" method="get" >
+<td><button onclick="do_get()">GET</button></td>    <!-- Implement: a button that fires do_get() -->
+<td></td> <!-- Implement: a text input field (N/A for GET but it provides visual alignment of the table) -->
+<td></td>   <!-- Implement: a text area for the response from the API -->
+</form>
+</tr>
+
+<tr>
+<form action= "/widget_models" models="post">
+<td><button type="submit">POST</button></td>   <!-- Implement: a button that fires do_post() -->
+<td><input type="text" placeholder="Post Entry" ></td><!-- Implement: a text input field -->
+<td>POST response</td>   <!-- Implement: a text field for the response from the API -->
+</form>
+</tr>
+
+<tr>
+<td><button onclick="do_put()">PUT</button></td>     <!-- Implement: a button that fires do_put() -->
+<td><input type="text" placeholder="Old Entry"  id="fname" name="fname"><input type="text" placeholder="New Entry" id="dname" name="dname"></td> <!-- Implement: a text input field -->
+<td>PUT response</td>   <!-- Implement: a text area for the response from the API -->
+</tr>
+
+<tr>    
+<td><button onclick="do_delete()">DELETE</button></td>     <!-- Implement: a button that fires do_delete() -->
+<td><input type="text" placeholder="Entry to Delete" id="fname" name="fname"></td> <!-- Implement: a text input field -->
+<td>DELETE response</td>   <!-- Implement: a text area for the response from the API -->
+</tr>
+</table>
+
+</body>
+</html>
+
+

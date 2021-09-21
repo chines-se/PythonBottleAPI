@@ -12,6 +12,7 @@ import json
 import requests
 
 
+
 while True:
     # String s holds the command and any input parameters separated by space
     s = input(">> ")
@@ -43,7 +44,7 @@ while True:
         r = requests.delete(f"http://127.0.0.1:5000/widget_models/{oldname}")
         # Implement: logic to send a DELETE to the server and print the response or status
         if r.status_code != 404 and r.status_code != 400:
-            print(f"{r.status_code} " + ":" + oldname + " Deleted Sucessfully")
+            print(f"{r.status_code} " + ": " + oldname + " Deleted Sucessfully")
         else:
             print("Invalid Input")        
     elif cmd == "x":
@@ -51,4 +52,3 @@ while True:
     else:
         print('\nunknown command')
 
-        

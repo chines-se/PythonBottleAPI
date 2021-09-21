@@ -9,7 +9,7 @@
 """
 
 from bottle import run, default_app, static_file
-from bottle import get, post, put, delete, response, request
+from bottle import get, post, put, delete, response, request, template
 import json, re
 import sys
 
